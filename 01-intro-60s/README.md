@@ -16,13 +16,13 @@ Generate awareness and interest in Comfy-PR by highlighting the problem and solu
 
 ## Files
 
-| File | Purpose |
-|------|---------|
-| `script.md` | Full narration script with timings |
-| `storyboard.md` | Shot list and visual planning |
-| `talking-points.md` | Messaging guide and key value props |
+| File                      | Purpose                                  |
+| ------------------------- | ---------------------------------------- |
+| `script.md`               | Full narration script with timings       |
+| `storyboard.md`           | Shot list and visual planning            |
+| `talking-points.md`       | Messaging guide and key value props      |
 | `architecture-diagram.md` | Mermaid diagram for "How It Works" scene |
-| `TODO.md` | Automated generation pipeline checklist |
+| `TODO.md`                 | Automated generation pipeline checklist  |
 
 ## Quick Generate
 

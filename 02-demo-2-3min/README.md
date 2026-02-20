@@ -15,11 +15,11 @@ Convert interested viewers into users by showing actual product capabilities and
 
 ## Files
 
-| File | Purpose |
-|------|---------|
-| `script.md` | Full narration script (~2:30, 375 words) |
+| File            | Purpose                                               |
+| --------------- | ----------------------------------------------------- |
+| `script.md`     | Full narration script (~2:30, 375 words)              |
 | `storyboard.md` | Shot-by-shot visual plan with highlights and overlays |
-| `demo-flow.md` | Recording checklist and screen capture guide |
+| `demo-flow.md`  | Recording checklist and screen capture guide          |
 
 ## Production Approach
 
@@ -34,18 +34,21 @@ See `demo-flow.md` for detailed recording instructions.
 ## Recording Checklist
 
 ### Pre-Production
+
 - [ ] Set up demo repository on GitHub
 - [ ] Configure Slack workspace with bot
 - [ ] Ensure dashboard has real data loaded
 - [ ] Test terminal commands (dry run)
 
 ### Recording
+
 - [ ] Terminal demo (30s raw footage)
 - [ ] Slack bot interaction (30s raw footage)
 - [ ] Dashboard walkthrough (35s raw footage)
 - [ ] Architecture diagram (static or animated)
 
 ### Post-Production
+
 - [ ] Edit and trim recordings
 - [ ] Add orange highlights and arrows
 - [ ] Burn in subtitles

@@ -7,12 +7,14 @@ Step-by-step guide for recording actual screen demos.
 ## DEMO 1: Terminal / CLI (30 seconds of recording)
 
 ### Setup
+
 - Terminal: iTerm2 or similar with dark theme
 - Font: JetBrains Mono, 18pt
 - Window size: 1920x1080 (full screen)
 - Prepare a real example repo: `https://github.com/example/comfy-node-demo`
 
 ### Recording Steps
+
 1. Show clean terminal prompt
 2. Type (slowly, visible): `bunx comfy-pr https://github.com/example/comfy-node-demo`
 3. Press Enter
@@ -28,6 +30,7 @@ Step-by-step guide for recording actual screen demos.
 6. Open browser to the PR (show it briefly)
 
 ### Post-Production
+
 - Speed up the "waiting" parts by 2x (keep typing/results at normal speed)
 - Add orange highlight box around important output lines
 - Overlay text: "⏱ 28 seconds" at the end
@@ -37,11 +40,13 @@ Step-by-step guide for recording actual screen demos.
 ## DEMO 2: Slack Bot (30 seconds of recording)
 
 ### Setup
+
 - Slack workspace with ComfyPR bot installed
 - Create a test thread or use #prbot channel
 - Prepare message: `@comfyprbot publish https://github.com/user/another-node`
 
 ### Recording Steps
+
 1. Show Slack channel view (dark mode)
 2. Type the mention message
 3. Send it
@@ -56,6 +61,7 @@ Step-by-step guide for recording actual screen demos.
 7. Bot responds and updates
 
 ### Post-Production
+
 - Crop to just the message thread (remove sidebar clutter)
 - Add orange arrows pointing to bot messages
 - Overlay text: "Real-time updates"
@@ -65,11 +71,13 @@ Step-by-step guide for recording actual screen demos.
 ## DEMO 3: Dashboard (35 seconds of recording)
 
 ### Setup
+
 - Open https://comfy-pr.vercel.app in browser (dark mode)
 - Ensure dashboard has real data loaded
 - Zoom level: 100% (crisp text)
 
 ### Recording Steps
+
 1. Show homepage — stat cards at top
 2. Slowly scroll down to show the repository table
 3. Hover over a row to highlight it
@@ -80,6 +88,7 @@ Step-by-step guide for recording actual screen demos.
 8. Open CSV briefly in Numbers/Excel (optional)
 
 ### Post-Production
+
 - Smooth scroll (no jerky mouse movements)
 - Add zoom-in effect on stat cards (1.1x scale, 0.5s)
 - Highlight cursor with orange glow
@@ -90,11 +99,13 @@ Step-by-step guide for recording actual screen demos.
 ## DEMO 4: Architecture Diagram (10 seconds)
 
 ### Recording
+
 - Use the Mermaid diagram from `shared/architecture-diagram.md`
 - Render as animated SVG or screen-record it being drawn
 - OR: Use static PNG with zoom + pan animation in post
 
 ### Post-Production
+
 - Animate arrows flowing (optional)
 - Highlight each component as narration mentions it
 
@@ -102,14 +113,15 @@ Step-by-step guide for recording actual screen demos.
 
 ## Screen Recording Tools
 
-| Tool | Platform | Best For |
-|------|----------|----------|
-| **QuickTime** | macOS | Simple, built-in |
-| **OBS Studio** | All | Professional, free, configurable |
-| **ScreenFlow** | macOS | Easy editing + recording |
-| **Loom** | Web/Desktop | Quick recordings with webcam overlay |
+| Tool           | Platform    | Best For                             |
+| -------------- | ----------- | ------------------------------------ |
+| **QuickTime**  | macOS       | Simple, built-in                     |
+| **OBS Studio** | All         | Professional, free, configurable     |
+| **ScreenFlow** | macOS       | Easy editing + recording             |
+| **Loom**       | Web/Desktop | Quick recordings with webcam overlay |
 
 ### Recommended Settings
+
 - Resolution: 1920×1080 (1080p)
 - Frame rate: 30 FPS
 - Format: MP4 (H.264)

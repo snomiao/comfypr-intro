@@ -114,16 +114,16 @@ See [`shared/brand-colors.md`](shared/brand-colors.md) for full palette.
 
 ## 🛠️ Generation Scripts
 
-| Script | Purpose | Usage |
-|--------|---------|-------|
-| `tts.ts` | Generate narration audio via OpenAI | `bun gen/tts.ts --script=<path>` |
-| `diagram.ts` | Render Mermaid diagrams to PNG | `bun gen/diagram.ts` |
-| `screenshots.ts` | Capture website screenshots | `bun gen/screenshots.ts` |
-| `slides.ts` | Generate HTML slides as PNG frames | `bun gen/slides.ts` |
-| `mock-terminal.ts` | Create terminal screenshot | `bun gen/mock-terminal.ts` |
-| `compose.ts` | Compose video from frames + audio | `bun gen/compose.ts` |
-| `mix-audio.ts` | Mix narration with background music | `bun gen/mix-audio.ts` |
-| `run-all.ts` | Run full pipeline | `bun gen/run-all.ts` |
+| Script             | Purpose                             | Usage                            |
+| ------------------ | ----------------------------------- | -------------------------------- |
+| `tts.ts`           | Generate narration audio via OpenAI | `bun gen/tts.ts --script=<path>` |
+| `diagram.ts`       | Render Mermaid diagrams to PNG      | `bun gen/diagram.ts`             |
+| `screenshots.ts`   | Capture website screenshots         | `bun gen/screenshots.ts`         |
+| `slides.ts`        | Generate HTML slides as PNG frames  | `bun gen/slides.ts`              |
+| `mock-terminal.ts` | Create terminal screenshot          | `bun gen/mock-terminal.ts`       |
+| `compose.ts`       | Compose video from frames + audio   | `bun gen/compose.ts`             |
+| `mix-audio.ts`     | Mix narration with background music | `bun gen/mix-audio.ts`           |
+| `run-all.ts`       | Run full pipeline                   | `bun gen/run-all.ts`             |
 
 ## 📊 Output Files
 
@@ -176,12 +176,14 @@ To add a new video:
 ## 🔧 Troubleshooting
 
 ### "OPENAI_API_KEY not set"
+
 ```bash
 cp .env.example .env
 # Edit .env and add: OPENAI_API_KEY=sk-...
 ```
 
 ### "ffmpeg not found"
+
 ```bash
 # Ubuntu/Debian
 apt install ffmpeg
@@ -191,12 +193,15 @@ brew install ffmpeg
 ```
 
 ### "Playwright browser not installed"
+
 ```bash
 bunx playwright install chromium
 ```
 
 ### Video generation fails
+
 Check individual phase logs:
+
 ```bash
 bun gen/tts.ts        # Test audio generation
 bun gen/slides.ts     # Test slide rendering

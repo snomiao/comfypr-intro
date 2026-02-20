@@ -7,6 +7,7 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 ## Section 1: Hook & Context [0:00–0:15]
 
 **Shot 1a** (0:00–0:05)
+
 - **Visual**: Montage of pain points
   - GitHub repo with messy structure
   - Confused developer looking at documentation
@@ -15,6 +16,7 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 - **Transition**: Fade to black
 
 **Shot 1b** (0:05–0:15)
+
 - **Visual**: Comfy-PR logo appears on dark background
 - **Text overlay**: "Comfy-PR changes that."
 - **Narration**: "Let me show you."
@@ -25,12 +27,14 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 ## Section 2: CLI Demo [0:15–0:45]
 
 **Shot 2a** (0:15–0:20)
+
 - **Visual**: Clean terminal, cursor blinking
 - **Text overlay**: "One command"
 - **Action**: Type appears: `bunx comfy-pr https://github.com/yourname/amazing-node`
 - **Highlight**: Orange box around command
 
 **Shot 2b** (0:20–0:35)
+
 - **Visual**: Terminal output streams in real-time
 - **Highlight boxes** (appear sequentially):
   - ✓ Forking repository
@@ -42,6 +46,7 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 - **Timer overlay**: "⏱ 28s" in corner
 
 **Shot 2c** (0:35–0:45)
+
 - **Visual**: PR URL appears in terminal
 - **Action**: Browser opens, show GitHub PR page briefly
 - **Highlight**: Orange arrow pointing to PR title and description
@@ -53,12 +58,14 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 ## Section 3: Slack Bot Demo [0:45–1:15]
 
 **Shot 3a** (0:45–0:50)
+
 - **Visual**: Slack channel view (dark mode)
 - **Text overlay**: "Need help? Ask the bot."
 - **Action**: Type message: `@comfyprbot publish github.com/user/my-node`
 - **Highlight**: Orange glow around mention
 
 **Shot 3b** (0:50–1:05)
+
 - **Visual**: Bot responds in thread
 - **Threaded messages appear** (animated, one by one):
   1. "Starting automation..."
@@ -71,6 +78,7 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 - **Text overlay**: "Real-time progress updates"
 
 **Shot 3c** (1:05–1:15)
+
 - **Visual**: User sends follow-up: "Can you add MIT license?"
 - **Bot responds**: "Sure! Updating PR..."
 - **Action**: Show GitHub PR gets new commit
@@ -82,6 +90,7 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 ## Section 4: Dashboard [1:15–1:50]
 
 **Shot 4a** (1:15–1:25)
+
 - **Visual**: Dashboard homepage loads (comfy-pr.vercel.app)
 - **Zoom in** on stat cards (1.1x scale):
   - 500+ Total Repos
@@ -91,6 +100,7 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 - **Highlight**: Orange border around each stat card as narration mentions it
 
 **Shot 4b** (1:25–1:40)
+
 - **Visual**: Scroll down to repository table
 - **Action**: Hover over a row → highlights
 - **Highlight**: Orange cursor glow
@@ -98,6 +108,7 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 - **Text overlay**: "Track every node"
 
 **Shot 4c** (1:40–1:50)
+
 - **Visual**: Click "Export CSV" button
 - **Action**: Download notification appears
 - **Visual**: CSV opens briefly in Excel/Numbers (PiP)
@@ -110,6 +121,7 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 ## Section 5: Architecture [1:50–2:15]
 
 **Shot 5a** (1:50–2:00)
+
 - **Visual**: Architecture diagram (animated or static)
 - **Flowchart**:
   - Slack → Master Bot → Worker Agents → GitHub
@@ -117,6 +129,7 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 - **Highlight**: Orange glow on "Master Bot" label
 
 **Shot 5b** (2:00–2:10)
+
 - **Visual**: Split screen
   - Left: Master bot in Slack
   - Right: Multiple worker terminals (3-4) running in parallel
@@ -124,6 +137,7 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 - **Animation**: Progress bars on each worker
 
 **Shot 5c** (2:10–2:15)
+
 - **Visual**: SQLite cache icon + speed gauge
 - **Text overlay**: "Cached API responses = 10x faster"
 - **Animation**: Gauge needle swings from red to green
@@ -134,6 +148,7 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 ## Section 6: Results & CTA [2:15–2:30]
 
 **Shot 6a** (2:15–2:20)
+
 - **Visual**: Animated counter rolling up
   - "500+ repositories processed"
   - "Days → 10 minutes average"
@@ -141,11 +156,13 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 - **Text overlay**: Big numbers with orange highlights
 
 **Shot 6b** (2:20–2:25)
+
 - **Visual**: GitHub repo page (github.com/Comfy-Org/Comfy-PR)
 - **Text overlay**: "Open Source"
 - **Highlight**: Star count, README preview
 
 **Shot 6c** (2:25–2:30)
+
 - **Visual**: End card (dark background)
   - Comfy-PR logo centered
   - URLs fade in:
@@ -160,23 +177,27 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 ## Visual Style Guide
 
 ### Colors
+
 - Background: #0d1117 (dark)
 - Highlights: #ff9900 (orange)
 - Success: #27c93f (green)
 - Text: #ffffff (white), #c9d1d9 (muted)
 
 ### Typography
+
 - Headings: Inter Black, 72pt
 - Body: Inter Regular, 36pt
 - Code: JetBrains Mono, 28pt
 - Overlays: Inter SemiBold, 42pt
 
 ### Transitions
+
 - Crossfade: 0.3s
 - Swipe: 0.5s (when changing contexts)
 - Zoom: 0.4s ease-out
 
 ### Highlights
+
 - Orange boxes: 4px border, rounded corners
 - Cursor glow: 20px orange blur
 - Arrows: 8px stroke, rounded cap
@@ -185,15 +206,15 @@ Shot-by-shot visual plan for the 2-3 minute demo video.
 
 ## Assets Needed
 
-| Asset | Type | Used In |
-|-------|------|---------|
-| Terminal recording | Video | Section 2 |
-| Slack conversation | Screenshot/Video | Section 3 |
-| Dashboard walkthrough | Video | Section 4 |
-| Architecture diagram | PNG/SVG | Section 5 |
-| Merged PRs montage | Screenshots | Section 6 |
-| Comfy-PR logo | PNG (transparent) | Sections 1, 6 |
-| Background music | MP3 (~2:45 loop) | All |
+| Asset                 | Type              | Used In       |
+| --------------------- | ----------------- | ------------- |
+| Terminal recording    | Video             | Section 2     |
+| Slack conversation    | Screenshot/Video  | Section 3     |
+| Dashboard walkthrough | Video             | Section 4     |
+| Architecture diagram  | PNG/SVG           | Section 5     |
+| Merged PRs montage    | Screenshots       | Section 6     |
+| Comfy-PR logo         | PNG (transparent) | Sections 1, 6 |
+| Background music      | MP3 (~2:45 loop)  | All           |
 
 ---
 
