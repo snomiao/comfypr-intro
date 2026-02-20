@@ -1,0 +1,15 @@
+# Output directories
+out/
+gen/node_modules/
+
+# Dependencies
+node_modules/
+bun.lockb
+
+# Environment
+.env
+.env.local
+
+# Temp files
+*.log
+.DS_Store
