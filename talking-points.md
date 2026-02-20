@@ -30,15 +30,15 @@ Reference for narration, slide text, social posts, and presenter notes.
 
 ## The Solution (Value Props)
 
-| What Comfy-PR does | Why it matters |
-|--------------------|----------------|
-| Auto-configures `pyproject.toml` | Authors skip the spec-reading |
-| Auto-creates GitHub Actions workflow | CI/CD works out of the box |
-| Opens PR with template + description | Reviewers get consistent quality |
-| Slack-native AI bot for assistance | Authors get help in their existing workflow |
-| AI coding agents for all changes | No manual git operations needed |
-| Dashboard for status tracking | Org-wide visibility on registry pipeline |
-| Rule-based follow-ups | Nothing falls through the cracks |
+| What Comfy-PR does                   | Why it matters                              |
+| ------------------------------------ | ------------------------------------------- |
+| Auto-configures `pyproject.toml`     | Authors skip the spec-reading               |
+| Auto-creates GitHub Actions workflow | CI/CD works out of the box                  |
+| Opens PR with template + description | Reviewers get consistent quality            |
+| Slack-native AI bot for assistance   | Authors get help in their existing workflow |
+| AI coding agents for all changes     | No manual git operations needed             |
+| Dashboard for status tracking        | Org-wide visibility on registry pipeline    |
+| Rule-based follow-ups                | Nothing falls through the cracks            |
 
 ---
 
@@ -64,15 +64,19 @@ Reference for narration, slide text, social posts, and presenter notes.
 ## Audience-Specific Angles
 
 ### For Custom Node Authors
+
 > "Stop fighting the publishing process. Comfy-PR handles it — you just write the code."
 
 ### For Comfy-Org Contributors / Reviewers
+
 > "More consistent PRs, faster reviews, less back-and-forth."
 
 ### For AI / Developer Tool Enthusiasts
+
 > "A real-world master-worker AI agent system that automates GitHub workflows end-to-end."
 
 ### For the ComfyUI Community
+
 > "More nodes in the registry means more tools for everyone."
 
 ---
@@ -84,13 +88,14 @@ Reference for narration, slide text, social posts, and presenter notes.
 - `[N]` nodes successfully published
 - Days → minutes turnaround time
 
-*(Pull real numbers from comfy-pr.vercel.app dashboard before recording)*
+_(Pull real numbers from comfy-pr.vercel.app dashboard before recording)_
 
 ---
 
 ## Social Media / Video Description
 
 **YouTube / X description:**
+
 > Comfy-PR automates the entire ComfyUI Custom Node publishing workflow. From pyproject.toml setup to GitHub Actions to pull requests — done in minutes, not days.
 >
 > Dashboard: comfy-pr.vercel.app

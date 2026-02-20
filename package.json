@@ -1,0 +1,20 @@
+{
+  "name": "comfypr-intro",
+  "version": "1.0.0",
+  "description": "Automated video generation for Comfy-PR intro",
+  "type": "module",
+  "scripts": {
+    "gen": "bun gen/run-all.ts",
+    "gen:audio": "bun gen/tts.ts",
+    "gen:assets": "bun gen/screenshots.ts && bun gen/diagram.ts",
+    "gen:slides": "bun gen/slides.ts",
+    "gen:video": "bun gen/compose.ts && bun gen/mix-audio.ts"
+  },
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^11.4.1",
+    "@types/node": "^22.10.5",
+    "ansi-to-html": "^0.7.2",
+    "openai": "^4.77.3",
+    "playwright": "^1.49.1"
+  }
+}
