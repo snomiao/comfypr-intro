@@ -80,7 +80,8 @@ async function generateAudio(scene: Scene, outputDir: string): Promise<string> {
 
 async function getAudioDuration(filePath: string): Promise<number> {
   try {
-    const result = await $`ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 ${filePath}`.text();
+    const result =
+      await $`ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 ${filePath}`.text();
     return parseFloat(result.trim());
   } catch (error) {
     console.warn(`Could not get duration for ${filePath}, using 0`);
@@ -111,9 +112,7 @@ async function concatenateAudio(scenes: Scene[], outputDir: string): Promise<voi
   console.log("\nConcatenating audio files...");
 
   // Create a concat list file for ffmpeg
-  const concatList = scenes
-    .map((scene) => `file 'scene-${scene.number}.mp3'`)
-    .join("\n");
+  const concatList = scenes.map((scene) => `file 'scene-${scene.number}.mp3'`).join("\n");
 
   const concatListPath = join(outputDir, "concat-list.txt");
   await writeFile(concatListPath, concatList);

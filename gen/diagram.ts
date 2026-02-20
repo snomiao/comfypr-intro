@@ -23,10 +23,7 @@ async function extractMermaidDiagram(mdPath: string): Promise<string> {
   return mermaidMatch[1];
 }
 
-async function renderMermaidDiagram(
-  mermaidCode: string,
-  outputPath: string
-): Promise<void> {
+async function renderMermaidDiagram(mermaidCode: string, outputPath: string): Promise<void> {
   console.log("Rendering Mermaid diagram...");
 
   // Create a temporary .mmd file

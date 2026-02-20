@@ -258,10 +258,7 @@ const SLIDES: SlideConfig[] = [
   },
 ];
 
-async function renderSlide(
-  slide: SlideConfig,
-  outputDir: string
-): Promise<void> {
+async function renderSlide(slide: SlideConfig, outputDir: string): Promise<void> {
   console.log(`Rendering slide ${slide.sceneNumber}: ${slide.title}`);
 
   const browser = await chromium.launch({ headless: true });

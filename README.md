@@ -1,29 +1,69 @@
-# Comfy-PR — 1-Minute Intro Video: Production Materials
+# Comfy-PR Video Materials
 
-All materials for the intro video are in this directory.
+All video production materials for Comfy-PR marketing and documentation.
 
-## Files
+## 📁 Project Structure
 
-| File                      | Purpose                                                            |
-| ------------------------- | ------------------------------------------------------------------ |
-| `script.md`               | Full narration script, timed by scene (~155 words, 60s)            |
-| `storyboard.md`           | Scene-by-scene visual plan with shot list and asset checklist      |
-| `architecture-diagram.md` | Diagram for Scene 4 — ASCII, simplified, and Mermaid source        |
-| `talking-points.md`       | Key messages, value props, audience angles, and stats placeholders |
-| `TODO.md`                 | Complete automated generation pipeline                             |
+```
+video-draft/
+├── 01-intro-60s/           # 60-second intro video (fully automated)
+│   ├── script.md
+│   ├── storyboard.md
+│   ├── talking-points.md
+│   ├── architecture-diagram.md
+│   ├── TODO.md
+│   └── README.md
+│
+├── 02-demo-2-3min/         # 2-3 minute product demo (manual + automated)
+│   ├── script.md
+│   ├── storyboard.md
+│   ├── demo-flow.md
+│   └── README.md
+│
+├── gen/                    # Shared generation scripts
+│   ├── tts.ts              # OpenAI TTS audio generation
+│   ├── diagram.ts          # Mermaid diagram rendering
+│   ├── screenshots.ts      # Playwright screenshot capture
+│   ├── slides.ts           # HTML slides → PNG frames
+│   ├── mock-terminal.ts    # Terminal mock screenshot
+│   ├── compose.ts          # FFmpeg video composition
+│   ├── mix-audio.ts        # Background music mixing
+│   └── run-all.ts          # Master orchestrator
+│
+├── shared/                 # Shared assets and style guides
+│   └── brand-colors.md     # Consistent color palette
+│
+└── out/                    # Generated outputs
+    ├── 01-intro-60s/
+    │   ├── audio/
+    │   ├── assets/
+    │   ├── frames/
+    │   └── video-final.mp4 ⭐
+    └── 02-demo-2-3min/
+        └── (manual recordings + edited final video)
+```
 
-## Video Structure (60 seconds)
+## 🎬 Videos
 
-| Time      | Scene        | Content                                                |
-| --------- | ------------ | ------------------------------------------------------ |
-| 0:00–0:07 | Hook         | Thousands of nodes, one painful process                |
-| 0:07–0:18 | Problem      | Manual steps: pyproject.toml, Actions, PRs, follow-ups |
-| 0:18–0:32 | Solution     | Comfy-PR automates the whole workflow                  |
-| 0:32–0:47 | How it works | Slack bot → AI agents → GitHub PR + dashboard          |
-| 0:47–0:56 | Scale        | Hundreds of repos, days → minutes                      |
-| 0:56–1:00 | CTA          | "Built to grow the Comfy Community"                    |
+### 1. 60-Second Intro
 
-## Automated Video Generation
+**Purpose**: Generate awareness on landing pages, social media, and README
+**Duration**: ~60 seconds
+**Production**: Fully automated
+**Platforms**: GitHub, Twitter, LinkedIn, YouTube
+
+👉 See [`01-intro-60s/README.md`](01-intro-60s/README.md) for details
+
+### 2. 2-3 Minute Demo
+
+**Purpose**: Showcase features with live screen recordings
+**Duration**: ~2:30
+**Production**: Manual recordings + automated editing
+**Platforms**: YouTube, landing page, documentation
+
+👉 See [`02-demo-2-3min/README.md`](02-demo-2-3min/README.md) for details
+
+## 🚀 Quick Start
 
 ### Prerequisites
 
@@ -45,64 +85,132 @@ cp .env.example .env
 # Edit .env and add your OPENAI_API_KEY
 ```
 
-### Generate Video
-
-Run the full pipeline:
+### Generate 60s Intro Video
 
 ```bash
-bun gen/run-all.ts
+bun gen/run-all.ts --video=01-intro-60s
 ```
 
-Or run individual phases:
+Output: `out/01-intro-60s/video-final.mp4`
+
+### Generate Demo Video Audio
 
 ```bash
-bun run gen:audio      # Phase 1: TTS audio
-bun run gen:assets     # Phase 2: Diagrams & screenshots
-bun run gen:slides     # Phase 3: Slide frames
-bun run gen:video      # Phase 5: Compose & mix
+bun gen/tts.ts --script=02-demo-2-3min/script.md --output=out/02-demo-2-3min/audio/
 ```
 
-### Output
+Then capture screen recordings manually (see `02-demo-2-3min/demo-flow.md`).
 
-All generated files go to `out/`:
+## 🎨 Shared Style Guide
+
+All videos follow consistent branding:
+
+- **Colors**: Orange (#ff9900) primary, dark backgrounds (#0d1117)
+- **Fonts**: Inter (UI), JetBrains Mono (code)
+- **Transitions**: 0.3s crossfade
+- **Music**: Ambient tech track at -22dB
+
+See [`shared/brand-colors.md`](shared/brand-colors.md) for full palette.
+
+## 🛠️ Generation Scripts
+
+| Script | Purpose | Usage |
+|--------|---------|-------|
+| `tts.ts` | Generate narration audio via OpenAI | `bun gen/tts.ts --script=<path>` |
+| `diagram.ts` | Render Mermaid diagrams to PNG | `bun gen/diagram.ts` |
+| `screenshots.ts` | Capture website screenshots | `bun gen/screenshots.ts` |
+| `slides.ts` | Generate HTML slides as PNG frames | `bun gen/slides.ts` |
+| `mock-terminal.ts` | Create terminal screenshot | `bun gen/mock-terminal.ts` |
+| `compose.ts` | Compose video from frames + audio | `bun gen/compose.ts` |
+| `mix-audio.ts` | Mix narration with background music | `bun gen/mix-audio.ts` |
+| `run-all.ts` | Run full pipeline | `bun gen/run-all.ts` |
+
+## 📊 Output Files
+
+Generated videos are saved to `out/<video-name>/`:
 
 ```
 out/
-├── audio/
-│   ├── scene-{1-7}.mp3        # TTS per scene
-│   ├── narration-full.mp3     # Concatenated narration
-│   └── timings.json           # Scene durations
-├── assets/
-│   ├── arch-diagram.png       # Architecture diagram
-│   ├── dashboard.png          # Dashboard screenshot
-│   ├── registry-homepage.png  # Registry screenshot
-│   ├── github-pr.png          # Example PR screenshot
-│   ├── terminal-demo.png      # Terminal mock
-│   └── bgmusic.mp3           # Background music (download separately)
-├── frames/
-│   └── scene-{1-7}.png        # Rendered slides
-├── video-raw.mp4              # Video without music
-└── video-final.mp4            # Final video with music ⭐
+├── 01-intro-60s/
+│   ├── audio/
+│   │   ├── scene-1.mp3 ... scene-7.mp3
+│   │   ├── narration-full.mp3
+│   │   └── timings.json
+│   ├── assets/
+│   │   ├── arch-diagram.png
+│   │   ├── dashboard.png
+│   │   ├── terminal-demo.png
+│   │   └── bgmusic.mp3 (download separately)
+│   ├── frames/
+│   │   └── scene-1.png ... scene-7.png
+│   ├── video-raw.mp4
+│   └── video-final.mp4 ⭐
+│
+└── 02-demo-2-3min/
+    ├── audio/
+    ├── recordings/  (manual screen captures)
+    └── video-final.mp4 ⭐
 ```
 
-### Background Music (Optional)
+## 🎵 Background Music
 
-For the final video with music, download a royalty-free track:
+For videos with music, download a royalty-free track:
 
 1. Go to https://pixabay.com/music/ (search "technology ambient")
-2. Download a ~70s ambient/tech track
-3. Save as `out/assets/bgmusic.mp3`
+2. Download a ~70-90s ambient/tech track
+3. Save as `out/<video-name>/assets/bgmusic.mp3`
 4. Run `bun gen/mix-audio.ts`
 
-## Manual Production Steps (Alternative)
+## 📝 Adding New Videos
 
-If you prefer manual production instead of automated generation:
+To add a new video:
 
-## Quick Production Steps
+1. Create folder: `03-your-video/`
+2. Add files:
+   - `README.md` (purpose, duration, platforms)
+   - `script.md` (narration with timings)
+   - `storyboard.md` (shot list)
+3. Update this README to link to it
+4. Generate or record as needed
 
-1. Record the narration from `script.md`
-2. Capture screen recordings per `storyboard.md` checklist
-3. Export architecture diagram from `architecture-diagram.md` (use Mermaid or Figma)
-4. Fill in real stats from comfy-pr.vercel.app before recording Scene 5
-5. Edit: ~2–3 cuts per scene, keep pace snappy
-6. Add subtle background music (tech/ambient, -20dB under voice)
+## 🔧 Troubleshooting
+
+### "OPENAI_API_KEY not set"
+```bash
+cp .env.example .env
+# Edit .env and add: OPENAI_API_KEY=sk-...
+```
+
+### "ffmpeg not found"
+```bash
+# Ubuntu/Debian
+apt install ffmpeg
+
+# macOS
+brew install ffmpeg
+```
+
+### "Playwright browser not installed"
+```bash
+bunx playwright install chromium
+```
+
+### Video generation fails
+Check individual phase logs:
+```bash
+bun gen/tts.ts        # Test audio generation
+bun gen/slides.ts     # Test slide rendering
+bun gen/compose.ts    # Test video composition
+```
+
+## 📚 Resources
+
+- [OpenAI TTS API Docs](https://platform.openai.com/docs/guides/text-to-speech)
+- [FFmpeg Documentation](https://ffmpeg.org/documentation.html)
+- [Playwright Docs](https://playwright.dev/)
+- [Mermaid Diagram Syntax](https://mermaid.js.org/)
+
+## 📄 License
+
+All video materials and scripts are part of the Comfy-PR project.
+See main repository for license details.

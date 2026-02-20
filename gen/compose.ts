@@ -26,7 +26,7 @@ async function loadTimings(timingsPath: string): Promise<Timings> {
 async function composeVideo(
   framesDir: string,
   audioDir: string,
-  outputPath: string
+  outputPath: string,
 ): Promise<void> {
   console.log("Loading timing information...");
   const timingsPath = join(audioDir, "timings.json");
@@ -62,7 +62,7 @@ async function composeVideo(
 
     const nextStream = `[v${i}]`;
     filterParts.push(
-      `${currentStream}[${i}:v]xfade=transition=fade:duration=${crossfadeDuration}:offset=${fadeOffset}${nextStream}`
+      `${currentStream}[${i}:v]xfade=transition=fade:duration=${crossfadeDuration}:offset=${fadeOffset}${nextStream}`,
     );
     currentStream = nextStream;
   }

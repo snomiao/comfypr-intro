@@ -25,7 +25,7 @@ async function getVideoDuration(videoPath: string): Promise<number> {
 async function mixAudioWithMusic(
   videoPath: string,
   musicPath: string,
-  outputPath: string
+  outputPath: string,
 ): Promise<void> {
   console.log("Getting video duration...");
   const duration = await getVideoDuration(videoPath);

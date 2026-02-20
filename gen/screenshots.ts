@@ -43,10 +43,7 @@ const SCREENSHOTS: ScreenshotTarget[] = [
   },
 ];
 
-async function captureScreenshot(
-  target: ScreenshotTarget,
-  outputDir: string
-): Promise<void> {
+async function captureScreenshot(target: ScreenshotTarget, outputDir: string): Promise<void> {
   console.log(`Capturing: ${target.name} from ${target.url}`);
 
   const browser = await chromium.launch({ headless: true });
@@ -125,7 +122,7 @@ async function findRecentPR(): Promise<string> {
   // Try to find a recent open PR from Comfy-Org/ComfyUI
   try {
     const response = await fetch(
-      "https://api.github.com/repos/Comfy-Org/ComfyUI/pulls?state=open&per_page=1"
+      "https://api.github.com/repos/Comfy-Org/ComfyUI/pulls?state=open&per_page=1",
     );
     const prs = await response.json();
 

@@ -112,9 +112,7 @@ async function checkPrerequisites(): Promise<void> {
       console.log(`✓ ${check.name} found`);
     } catch (error) {
       console.error(`✗ ${check.name} not found`);
-      throw new Error(
-        `Missing prerequisite: ${check.name}. Please install it and try again.`
-      );
+      throw new Error(`Missing prerequisite: ${check.name}. Please install it and try again.`);
     }
   }
 
